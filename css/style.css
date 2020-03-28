@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poiret one" !important;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  box-sizing: border-box;
+}
+
+a {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  /* Black see-through */
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.imagescontainer {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.imagescontainer:hover .overlay {
+  opacity: 1;
+}
+
+.Maingrid {
+  width: 100%;
+  display: flex;
+}
+
+.Header {
+  grid-area: header;
+  max-height: 150px;
+}
+
+.Drop-text {
+  font-size: small;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$ */
+.mycolumn {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.mycolumn img {
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.mycolumn img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.myrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.mycontainer {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  color: white;
+  font-size: 20px;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$ */
+
+.Gallery {
+  margin: 0 10px;
+  grid-area: gallery;
+  /* display: grid; */
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "galleryText"
+    "textCollection"
+    "collectionFaces"
+    "collectionCollage";
+}
+
+.Faces {
+  height: 300px;
+}
+
+@media only screen and (min-width: 400px) {
+  .Faces {
+    height: 450px;
+  }
+}
+
+.GalleryImages {
+  justify-content: center;
+}
+
+.GalleryImages img {
+  max-height: 225px;
+  min-width: 188px;
+  max-width: 225px;
+}
+
+@media only screen and (min-width: 700px) {
+  .GalleryImages img {
+    max-height: 250px;
+    max-width: 188px;
+  }
+}
+
+.slides {
+  display: none;
+  width: 100% !important;
+  height: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  min-width: 320px;
+}
+
+.Gallery h1 {
+  grid-area: galleryText;
+}
+
+.collectionFaces {
+  grid-area: collectionFaces;
+}
+
+.textCollection {
+  grid-area: textCollection;
+}
+
+.collectionShow {
+  align-content: flex-start;
+  display: block;
+  width: 100%;
+  height: 200px;
+}
+
+.collectionShow img {
+  object-fit: cover;
+  max-height: 150px;
+}
+
+.collectionShowSurr {
+  display: none;
+  align-items: flex-end;
+}
+
+.collectionCollage {
+  height: 474px;
+  grid-area: collectionCollage;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: 5% 87% 7%;
+  grid-template-areas:
+    "textCollageSurréaliste textCollageSurréaliste"
+    "slideContainterCollage slideContainterCollage"
+    "buttonCollageLeft buttonCollagRight ";
+}
+
+.textCollageSurréaliste {
+  align-self: baseline;
+  grid-area: textCollageSurréaliste;
+  display: block;
+}
+
+.textCollageSurréaliste h1 {
+  font-size: small;
+}
+
+.slideContainterCollage {
+  height: 450px;
+
+  grid-area: slideContainterCollage;
+}
+
+.buttonCollageLeft {
+  color: white;
+  align-self: baseline;
+  grid-area: buttonCollageLeft;
+}
+
+.buttonCollageRight {
+  color: white;
+  align-self: baseline;
+  text-align: end;
+  grid-area: buttonCollagRight;
+}
+
+.collectionCollage img {
+  width: 100%;
+}
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$ */
+
+.Contact {
+  grid-area: contact;
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  width: 100%;
+}
+
+.Contact-container {
+  padding-right: 15px !important;
+  padding-left: 15px !important;
+  width: 100%;
+}
+
+.Footer {
+  grid-area: footer;
+}
+
+nav div li {
+  list-style-type: none;
+  font-style: none;
+}
+
+.brand-sahin h1 {
+  font-size: 40px;
+}
+
+.brand-sahin h4 {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.desktopModelLinks {
+  display: none;
+}
+
+.headerLists a {
+  margin-bottom: 12px;
+  font-size: 20px;
+  height: 25px;
+  color: black !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.maindiv {
+  height: 400px !important;
+  object-fit: contain;
+  /* min-width: 350px; */
+}
+
+.Faces {
+  max-height: 600px;
+}
+
+.Faces img {
+  object-fit: cover;
+  height: 100%;
+}
+
+.maindiv-Moss {
+  height: 300px;
+}
+
+.Moss img {
+  height: 100%;
+  object-fit: cover;
+  max-width: 768px;
+  object-position: center;
+}
+
+/* **********BIO*************** */
+
+.Biography {
+  margin: 0 10px;
+  /* display: grid; */
+  grid-template-columns: 1fr;
+  grid-area: biography;
+  grid-template-areas: "Abouttext""imageSahin""Aboutgriddivone""Aboutgriddivtwo";
+}
+
+.Abouttext {
+  grid-area: Abouttext;
+  text-align: left;
+}
+
+.Aboutgridimg {
+  object-fit: cover;
+  grid-area: imageSahin;
+}
+
+.Aboutgriddivone {
+  grid-area: Aboutgriddivone;
+  text-align: left;
+}
+
+.Aboutgriddivtwo {
+  grid-area: Aboutgriddivtwo;
+  text-align: left;
+}
+
+.imageBio {
+  object-fit: contain;
+  align-self: baseline;
+  max-width: 70%;
+}
+
+/* *******************************CONTACT************************************************* */
+
+.Contact {
+  padding: 0 0;
+  grid-area: contact;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  /* min-width: 300px; */
+  margin-top: 4px;
+  margin-bottom: 6px;
+  resize: vertical;
+  border: none;
+}
+
+input[type="submit"] {
+  color: black;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: none;
+}
+
+/* *******************************Footer************************************************* */
+
+.Footer {
+  grid-area: footer;
+}
+
+/* *******************************Tabs************************************************* */
+
+.tabs input {
+  display: none;
+}
+
+.tabContent:target {
+  display: block;
+}
+
+.tabContent {
+  width: 1080px;
+  padding: 0 16px;
+  display: none;
+  animation: fadeEffect 0.5s;
+}
